@@ -1,0 +1,107 @@
+{%extends 'base2.html'%}
+
+
+{%block head%}
+
+<title>Login</title>
+
+{%endblock%}
+
+{%block body%}
+<div class="jumbotron jumbotron-fluid">
+                <div class="container">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+
+
+
+
+        </div>
+         <div class="col-sm-6">
+
+              <form action="/updateuser/{{id}}" method="post">
+                  
+
+
+  <div class="form-group row">
+    <label for="regno" class="col-sm-2 col-form-label">regno</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="regno" name="regno" required value="{{regno}}">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="firstname" class="col-sm-2 col-form-label">firstname</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="firstname" name="firstname" required value="{{firstname}}">
+    </div>
+  </div>
+  <div>
+      <label for="lastname" class="col-sm-2 col-form-label">lastname</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="lastname" name="lastname" required value="{{lastname}}">
+    </div>
+  </div>
+                   <div>
+      <label for="email" class="col-sm-2 col-form-label">email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" name="email" required value="{{email}}">
+    </div>
+  </div>
+
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">update</button>
+        <a href="/users">Back</a>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+         <div class="col-sm-3">
+
+        </div>
+    </div>
+</div>
+                </div>
+</div>
+
+{%endblock%}

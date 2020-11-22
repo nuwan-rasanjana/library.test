@@ -1,0 +1,72 @@
+{%extends 'base2.html'%}
+{%block head%}
+  <title>Rentals for reader</title>
+{%endblock%}
+
+{%block body%}
+<div class="jumbotron jumbotron-fluid">
+ <div class="container">
+   <div class="row">
+
+    <div class="col-sm-10">
+     <table cellpadding="20" cellspacing="20">
+    <tr>
+     <td align="center"><h5>Book number</h5></td>
+    <td align="center"><h5>Book name</h5></td>
+    <td align="center"><h5>Author</h5></td>
+     <td align="center"><h5>Rent date</h5></td>
+     <td align="center"><h5>Due date</h5></td>
+
+
+
+   </tr>
+
+    {%for row in cursor%}
+    <tr>
+     <td align="center" >
+
+      {%print(row[1])%}
+
+      </td>
+      <td align="center">
+
+      {%print(row[2])%}
+
+      </td>
+      <td align="center">
+
+      {%print(row[3])%}
+
+      </td>
+
+        <td align="center">
+
+      {%print(row[4])%}
+
+      </td>
+
+     <td align="center">
+
+      {%print(row[5])%}
+
+      </td>
+
+    </tr>
+    {%endfor%}
+</table>
+</div>
+    <div class="col-sm-2" align="right">
+         <div class="col-sm-2" align="right">
+     <div align="right">
+
+      <a href="/data">Back</a>
+     </div>
+     </div>
+
+     </div>
+</div>
+</div>
+</div>
+
+{%endblock%}
+

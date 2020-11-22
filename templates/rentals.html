@@ -1,0 +1,79 @@
+
+
+{%extends 'base2.html'%}
+{%block head%}
+  <title>Rentals</title>
+{%endblock%}
+
+{%block body%}
+<div class="jumbotron jumbotron-fluid">
+ <div class="container">
+   <div class="row">
+       <div >
+
+               <a  href="/rentals"><button type="button" class="btn btn-sm btn-light">Registration number</button></a>
+               <a  href="/rentals/booknumber"><button type="button" class="btn btn-sm btn-light">Book number</button></a>
+               <a  href="/rentals/rentdate"><button type="button" class="btn btn-sm btn-light">Rent Date</button></a>
+               <a  href="/rentals/duedate"><button type="button" class="btn btn-sm btn-light">Due Date</button></a>
+           </div>
+
+   </div>
+
+   <div class="row">
+    <div class="col-sm-10">
+        <hr>
+     <table cellpadding="20" cellspacing="20">
+    <tr>
+        <td align="center"><h5>Registration Number</h5></td>
+        <td align="center"><h5>Book Number</h5></td>
+        <td align="center"><h5>Rent Date</h5></td>
+        <td align="center"><h5>Due Date</h5></td>
+    <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+
+   </tr>
+
+    {%for row in cursor%}
+    <tr>
+     <td align="center" >
+
+      {%print(row[1])%}
+
+
+      </td>
+      <td align="center">
+
+      {%print(row[2])%}
+
+      </td>
+      <td align="center">
+
+      {%print(row[3])%}
+
+      </td>
+      <td align="center">
+
+      {%print(row[4])%}
+
+      </td>
+      <td>
+             <a href="/updaterental/{{row[0]}}"><button type="submit" class="btn btn-sm btn-primary">Update</button></a>
+             <a href="/deleterental/{{row[0]}}"><button type="submit" class="btn btn-sm btn-danger">Delete</button></a>
+      </td>
+
+    </tr>
+    {%endfor%}
+</table>
+</div>
+       <div class="col-sm-2" align="right">
+     <div align="right">
+     <a  href="/createrental"><button type="submit" class="btn btn-sm btn-dark">Create New</button></a>
+      <a href="/data">Back</a>
+     </div>
+       </div>
+</div>
+</div>
+</div>
+
+{%endblock%}
+
